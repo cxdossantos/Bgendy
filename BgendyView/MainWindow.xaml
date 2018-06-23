@@ -5,11 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BgendyView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Página Inicial" Height="450" Width="800">
     <Grid>
         <Menu HorizontalAlignment="Left" Height="38" Margin="10,0,0,0" VerticalAlignment="Top" Width="782" RenderTransformOrigin="-1.647,-1.18">
-            <MenuItem x:Name="Tela" Header="Cadastro" Height="38" Width="150" Click="Tela_Click"/>
+            <MenuItem x:Name="menuCadastros" Header="Cadastro" Height="38" Width="150" Click="MenuCadastros_Click">
+                <MenuItem Header="Novo" HorizontalAlignment="Left" Height="100" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Height="100" Width="140"/>
+            </MenuItem>
         </Menu>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="480,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBusca" Content="busca" HorizontalAlignment="Left" Margin="525,179,0,0" VerticalAlignment="Top" Width="75" Click="BtnBusca_Click"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="429,179,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click"/>
+        <ListView x:Name="listViewClientes" HorizontalAlignment="Left" Height="100" Margin="43,58,0,0" VerticalAlignment="Top" Width="359" RenderTransformOrigin="0.498,-0.633" Loaded="listViewClientes_Loaded">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

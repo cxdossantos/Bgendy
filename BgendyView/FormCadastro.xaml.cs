@@ -19,9 +19,9 @@ namespace BgendyView
     /// <summary>
     /// Lógica interna para Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Cadastro : Window
     {
-        public Window1()
+        public Cadastro()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace BgendyView
 
             clientesController.Adicionar(cliente);
 
-            MessageBox.Show("Cliente " + cliente.Nome + " registrado!");
+            MessageBox.Show("Cliente " + cliente.Nome + "  Cód.:  " + cliente.Id + " registrado!");
         }
     }
 }

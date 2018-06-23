@@ -20,6 +20,30 @@ namespace BgendyController
             contexto.SaveChanges();
         }
 
+        public Cliente BuscarPorID(int id)
+        {
+            return contexto.Clientes.Find(id);
+        }
+
+        public void Excluir (int id)
+        {
+            Cliente cliente = BuscarPorID(id);
+
+            if(cliente != null)
+            {
+                contexto.Clientes.Remove(cliente);
+                contexto.SaveChanges();
+            }
+            else
+            {
+                throw new NullReferenceException("Não encontrado.");
+            }
+        }
+
+        public IList<Cliente> ListarTodos()
+        {
+            return contexto.Clientes.ToList();
+        }
 
     }
 }
