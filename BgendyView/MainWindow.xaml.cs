@@ -42,13 +42,7 @@ namespace BgendyView
 
         }
 
-        private void MenuCadastros_Click(object sender, RoutedEventArgs e)
-        {
-            Cadastro cadastro = new Cadastro();
-            cadastro.ShowDialog();
-        }
-
-        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+/*        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
         {
             ClienteController clienteController = new ClienteController();
             int idBusca = Convert.ToInt32(txtId.Text);
@@ -56,33 +50,18 @@ namespace BgendyView
             clienteController.Excluir(idBusca);
             MessageBox.Show("Cliente Excluido com Sucesso!");
 
-            listViewClientes.Items.Clear();
-        }
+            PopulaListaClientes();
+            // listViewClientes.Items.Clear();
+        }*/
 
-        private void listViewClientes_Loaded(object sender, RoutedEventArgs e)
+        private void GerenciarCadastros(object sender, RoutedEventArgs e)
         {
-            ClienteController clienteController = new ClienteController();
-            IList<Cliente> clientes = clienteController.ListarTodos();
-
-            foreach (Cliente c in clientes)
-            {
-                listViewClientes.Items.Add(c);
-            }
-
-            var gridView = new GridView();
-            listViewClientes.View = gridView;
-            gridView.Columns.Add(new GridViewColumn
-            {
-                Header = "Id",
-                DisplayMemberBinding = new Binding("Id")
-            });
-            gridView.Columns.Add(new GridViewColumn
-            {
-                Header = "Nome",
-                DisplayMemberBinding = new Binding("Nome")
-            });
-
-            //listViewClientes.Items.Add(clientes);
+            GerenciarCadastros cadastros = new GerenciarCadastros();
+            cadastros.txtNome.IsEnabled = false;
+            cadastros.txtCpf.IsEnabled = false;
+            cadastros.txtDtNasc.IsEnabled = false;
+            cadastros.txtFone.IsEnabled = false;
+            cadastros.ShowDialog();
         }
     }
 }

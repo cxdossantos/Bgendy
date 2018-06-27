@@ -43,7 +43,20 @@ namespace BgendyController
         public IList<Cliente> ListarTodos()
         {
             return contexto.Clientes.ToList();
+
         }
 
+        public IList<Cliente> ListarPorNome(string nome)
+        {
+            // LAMBDA
+            return contexto.Clientes.Where(cliente => cliente.Nome.Contains(nome)).ToList();
+            //return contexto.Clientes.Where(cliente => cliente.Nome == nome).ToList();
+        }
+
+        public void Editar(Cliente entity)
+        {
+            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
+        }
     }
 }

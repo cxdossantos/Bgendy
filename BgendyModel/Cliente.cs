@@ -10,9 +10,9 @@ namespace BgendyModels
     {
         public int Id { get; set; }
         public String Nome { get; set; }
-        public String Cpf { get; set; }
-        public String DtNasc { get; set; }
-        public String Fone { get; set; }
+        public int Cpf { get; set; }
+        public DateTime DtNasc { get; set; }
+        public int Fone { get; set; }
 
     }
 }

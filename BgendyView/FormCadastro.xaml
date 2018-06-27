@@ -7,20 +7,16 @@
         mc:Ignorable="d"
         Title="Gerenciar Cadastro" Height="450" Width="800">
     <Grid x:Name="formCadastro">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="574*"/>
-            <ColumnDefinition Width="219*"/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="labelNome" Content="NOME: " HorizontalAlignment="Left" Margin="69,85,0,0" VerticalAlignment="Top" Width="104"/>
-        <Label x:Name="labelCpf" Content="CPF:" HorizontalAlignment="Left" Margin="69,116,0,0" VerticalAlignment="Top" Width="104"/>
-        <Label x:Name="labelDtNasc" Content="DT. NASC.:" HorizontalAlignment="Left" Margin="69,147,0,0" VerticalAlignment="Top" Width="104"/>
-        <Label x:Name="labelFone" Content="FONE(WHATSAPP):" HorizontalAlignment="Left" Margin="69,178,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="196,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="196,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtDtNasc" HorizontalAlignment="Left" Height="23" Margin="196,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtFone" HorizontalAlignment="Left" Height="23" Margin="196,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="322,225,0,0" VerticalAlignment="Top" Width="75" Click="btnSalvar_Click"/>
-        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="226,225,0,0" VerticalAlignment="Top" Width="75" Click="btnVoltar_Click"/>
+        <Label x:Name="labelNome" Content="NOME: " HorizontalAlignment="Left" Margin="28,282,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label x:Name="labelCpf" Content="CPF:" HorizontalAlignment="Left" Margin="28,313,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label x:Name="labelDtNasc" Content="DT. NASC.:" HorizontalAlignment="Left" Margin="308,282,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label x:Name="labelFone" Content="FONE(WHATSAPP):" HorizontalAlignment="Left" Margin="308,312,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="155,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="155,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDtNasc" HorizontalAlignment="Left" Height="24" Margin="434,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFone" HorizontalAlignment="Left" Height="24" Margin="434,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="482,368,0,0" VerticalAlignment="Top" Width="75" Click="btnSalvar_Click"/>
+        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="386,368,0,0" VerticalAlignment="Top" Width="75" Click="btnVoltar_Click" RenderTransformOrigin="0.373,5.775"/>
 
     </Grid>
 </Window>

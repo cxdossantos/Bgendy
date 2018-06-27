@@ -41,14 +41,13 @@ namespace BgendyView
             Cliente cliente = new Cliente();
 
             cliente.Nome = txtNome.Text;
-            cliente.Cpf = txtCpf.Text;
-            cliente.DtNasc = txtDtNasc.Text;
-            cliente.Fone = txtFone.Text;
-
-
+            cliente.Cpf = Convert.ToInt32(txtCpf.Text);
+            cliente.DtNasc = Convert.ToDateTime(txtDtNasc.Text);
+            cliente.Fone = Convert.ToInt32(txtFone.Text) ;
+            
             clientesController.Adicionar(cliente);
-
             MessageBox.Show("Cliente " + cliente.Nome + "  Cód.:  " + cliente.Id + " registrado!");
         }
+
     }
 }

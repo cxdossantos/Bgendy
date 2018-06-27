@@ -11,13 +11,13 @@ namespace BgendyController.Base
         void Adicionar(T entity);
 
         IList<T> ListarTodos();
-        /**
-          IList<T> ListarPorNome(string nome);
 
-          T BuscarPorID(int id);
-
-          void Editar(T entity);
-        **/
+        IList<T> ListarPorNome(string nome);
+        
+        T BuscarPorID(int id);
+        
+        void Editar(T entity);
+        
 
         void Excluir(int id); 
 
