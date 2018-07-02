@@ -62,6 +62,13 @@ namespace BgendyView
             cadastros.txtDtNasc.IsEnabled = false;
             cadastros.txtFone.IsEnabled = false;
             cadastros.ShowDialog();
+
+        }
+
+        private void GerenciarServicos(object sender, RoutedEventArgs e)
+        {
+            GerenciarServicos servicos = new GerenciarServicos();
+            servicos.ShowDialog();
         }
     }
 }

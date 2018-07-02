@@ -9,8 +9,8 @@
     <Grid>
         <Menu HorizontalAlignment="Left" Height="38" Margin="10,0,0,0" VerticalAlignment="Top" Width="782" RenderTransformOrigin="-1.647,-1.18">
             <MenuItem x:Name="menuCadastros" Header="Cadastro" Height="38" Width="150">
-                <MenuItem Header="Novo" HorizontalAlignment="Left" Height="100" Width="140"/>
-                <MenuItem Header="Gerenciar Cadastros" HorizontalAlignment="Left" Height="100" Width="140" Click="GerenciarCadastros"/>
+                <MenuItem Header="Serviços" HorizontalAlignment="Left" Height="100" Width="140" Click="GerenciarServicos"/>
+                <MenuItem Header="Cadastros" HorizontalAlignment="Left" Height="100" Width="140" Click="GerenciarCadastros"/>
             </MenuItem>
         </Menu>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="480,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

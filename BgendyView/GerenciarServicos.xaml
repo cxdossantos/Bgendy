@@ -7,22 +7,28 @@
         mc:Ignorable="d"
         Title="GerenciarServicos" Height="450" Width="800">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="148" Margin="35,33,0,0" VerticalAlignment="Top" Width="573">
+        <ListView x:Name="listViewServicos" HorizontalAlignment="Left" Height="148" Margin="40,61,0,0" VerticalAlignment="Top" Width="573" Loaded="ListViewServicos_Loaded">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="labelTitulo" Content="Informações Serviço:" HorizontalAlignment="Left" Margin="35,208,0,0" VerticalAlignment="Top" Width="121"/>
-        <TextBox x:Name="txtServico" HorizontalAlignment="Left" Height="23" Margin="140,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="labelServico" Content="Nome Serviço:" HorizontalAlignment="Left" Margin="35,245,0,0" VerticalAlignment="Top" Width="121"/>
-        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="140,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="labelValor" Content="Valor:" HorizontalAlignment="Left" Margin="35,277,0,0" VerticalAlignment="Top" Width="121"/>
-        <TextBox x:Name="txtTempo" HorizontalAlignment="Left" Height="23" Margin="140,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="labelTempo" Content="Tempo estimado:" HorizontalAlignment="Left" Margin="35,309,0,0" VerticalAlignment="Top" Width="121"/>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="185,361,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="54,361,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="labelTitulo" Content="Informações Serviço:" HorizontalAlignment="Left" Margin="40,236,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="txtDescricao" HorizontalAlignment="Left" Height="23" Margin="145,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelServico" Content="Nome Serviço:" HorizontalAlignment="Left" Margin="40,273,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="145,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelValor" Content="Valor:" HorizontalAlignment="Left" Margin="40,305,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="txtTempo" HorizontalAlignment="Left" Height="23" Margin="145,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelTempo" Content="Tempo estimado:" HorizontalAlignment="Left" Margin="40,337,0,0" VerticalAlignment="Top" Width="121"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="362,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnSalvar_Click"/>
+        <Button x:Name="BtnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="59,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnVoltar_Click"/>
+        <TextBox x:Name="txtBusca" HorizontalAlignment="Left" Height="23" Margin="403,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BtnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="538,37,0,0" VerticalAlignment="Top" Width="75" Click="BtnBuscar_Click"/>
+        <Button x:Name="BtnSelecionar" Content="Selecionar" HorizontalAlignment="Left" Margin="538,221,0,0" VerticalAlignment="Top" Width="75" Click="BtnSelecionar_Click"/>
+        <Button x:Name="BtnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="263,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnAlterar_Click"/>
+        <Button x:Name="BtnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="161,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click"/>
+        <Button x:Name="BtnNovo" Content="Novo" HorizontalAlignment="Left" Margin="448,221,0,0" VerticalAlignment="Top" Width="75" Click="BtnNovo_Click"/>
 
     </Grid>
 </Window>

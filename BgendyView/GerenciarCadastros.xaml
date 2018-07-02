@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="GerenciarCadastros" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="143,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="143,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="100" MaxLines="1"/>
         <Label x:Name="labelNome" Content="Nome: " HorizontalAlignment="Left" Margin="42,292,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="143,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="143,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MinLines="11" MaxLines="99999999" MaxLength="11"/>
         <Label x:Name="labelCpf" Content="CPF: " HorizontalAlignment="Left" Margin="42,323,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtDtNasc" HorizontalAlignment="Left" Height="23" Margin="410,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDtNasc" HorizontalAlignment="Left" Height="23" Margin="410,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="10" MinLines="10"/>
         <Label Content="Dt. Nasc." HorizontalAlignment="Left" Margin="309,292,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtFone" HorizontalAlignment="Left" Height="23" Margin="410,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFone" HorizontalAlignment="Left" Height="23" Margin="410,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="11" MinLines="10"/>
         <Label Content="Fone (WhatsApp): " HorizontalAlignment="Left" Margin="309,323,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="456,371,0,0" VerticalAlignment="Top" Width="74" Click="BtnSalvar_Click"/>
-        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="342,371,0,0" VerticalAlignment="Top" Width="74" Click="btnVoltar_Click"/>
+        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="342,371,0,0" VerticalAlignment="Top" Width="74" Click="BtnVoltar_Click"/>
         <ListView x:Name="listViewClientes" HorizontalAlignment="Left" Height="131" Margin="42,109,0,0" VerticalAlignment="Top" Width="488" Loaded="ListViewClientes_Loaded">
             <ListView.View>
                 <GridView>
@@ -25,10 +25,12 @@
             </ListView.View>
         </ListView>
         <Label Content="Buscar Cliente:" HorizontalAlignment="Left" Margin="230,78,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBusca" HorizontalAlignment="Left" Height="23" Margin="322,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBusca" HorizontalAlignment="Left" Height="23" Margin="322,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="100"/>
         <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="455,84,0,0" VerticalAlignment="Top" Width="75" Click="BtnBuscar_Click"/>
-        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="456,245,0,0" VerticalAlignment="Top" Width="75" Click="btnAlterar_Click"/>
-        <Button x:Name="btnAlterando" Content="Button" HorizontalAlignment="Left" Margin="242,371,0,0" VerticalAlignment="Top" Width="75" Click="btnAlterando_Click"/>
+        <Button x:Name="btnSelecionar" Content="Selecionar" HorizontalAlignment="Left" Margin="456,245,0,0" VerticalAlignment="Top" Width="75" Click="BtnSelecionar_Click"/>
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="242,371,0,0" VerticalAlignment="Top" Width="75" Click="BtnAlterar_Click"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="143,371,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click"/>
+        <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="342,245,0,0" VerticalAlignment="Top" Width="75" Click="BtnNovo_Click"/>
 
     </Grid>
 </Window>

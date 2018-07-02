@@ -18,7 +18,6 @@ namespace BgendyController.Base
         
         void Editar(T entity);
         
-
         void Excluir(int id); 
 
     }
