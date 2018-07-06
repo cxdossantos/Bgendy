@@ -78,8 +78,7 @@ namespace BgendyView
             servico.Descricao = txtDescricao.Text;
             servico.Valor = Convert.ToDouble(txtValor.Text);
             servico.Tempo = Convert.ToInt32(txtTempo.Text);
-
-
+            
             servicoController.Adicionar(servico);
             MessageBox.Show("Serviço " + servico.Descricao + "  Cód.:  " + servico.Id + " registrado!");
             PopulaListaServicos();
@@ -119,7 +118,6 @@ namespace BgendyView
             txtTempo.Text = Convert.ToString(servico.Tempo);
             txtValor.Text = Convert.ToString(servico.Valor);
 
-
         }
 
         private void BtnAlterar_Click(object sender, RoutedEventArgs e)
@@ -133,10 +131,11 @@ namespace BgendyView
             servico.Tempo = Convert.ToInt16(txtTempo.Text);
 
             servicoController.Editar(servico);
-            PopulaListaServicos();
+            PopulaListaServicos(); 
             MessageBox.Show("Alterado");
             LimparCampos();
             HabilitaCampos(validador);
+
         }
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
@@ -185,7 +184,6 @@ namespace BgendyView
                 btnSalvar.IsEnabled = true;
                 BtnExcluir.IsEnabled = true;
                 BtnAlterar.IsEnabled = true;
-                PopulaListaServicos();
             }
             else
             {

@@ -66,7 +66,7 @@ namespace BgendyView
             });
             gridView.Columns.Add(new GridViewColumn
             {
-                Header = "Nome",
+                Header = "Nome do Cliente",
                 DisplayMemberBinding = new Binding("_Cliente.Nome")
             });
 
@@ -75,16 +75,16 @@ namespace BgendyView
                 Header = "Serviço",
                 DisplayMemberBinding = new Binding("_Servico.Descricao")
             });
-            var bindingInicio = new Binding("DtAtendimentoInicio");
+            var bindingInicio = new Binding("Data e Hora Inicial");
             bindingInicio.StringFormat = "dd/MM/yyyy HH:mm";
             //binding.StringFormat = "dd/MM/yyyy HH:mm";
 
             gridView.Columns.Add(new GridViewColumn
             {
-                Header = "DtAtendimentoInicio",
+                Header = "Horario final",
                 DisplayMemberBinding = bindingInicio,
             });
-            var bindingFim = new Binding("DtAtendimentoFim");
+            var bindingFim = new Binding("Horario Final");
             bindingFim.StringFormat = "dd/MM/yyyy HH:mm";
 
             gridView.Columns.Add(new GridViewColumn

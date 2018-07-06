@@ -128,6 +128,8 @@ namespace BgendyView
             bool validador = true;
             HabilitaCampos(validador);
             btnSalvar.IsEnabled = false;
+            txtNome.IsEnabled = false;
+            txtCpf.IsEnabled = false;
             Cliente cliente = (Cliente)listViewClientes.SelectedItem;
 
             txtNome.Text = cliente.Nome;
@@ -139,7 +141,7 @@ namespace BgendyView
         private void BtnAlterar_Click(object sender, RoutedEventArgs e)
         {
             bool validador = false;
-            btnSalvar.IsEnabled = false;
+
 
             ClienteController clienteController = new ClienteController();
             Cliente cliente = (Cliente)listViewClientes.SelectedItem;
