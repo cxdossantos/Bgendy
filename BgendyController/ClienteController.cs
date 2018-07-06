@@ -22,7 +22,7 @@ namespace BgendyController
 
         public Cliente BuscarPorID(int id)
         {
-            return contexto.Clientes.Find(id);
+            return contexto.Clientes.FirstOrDefault(c => c.Id == id);
         }
 
         public void Excluir (int id)

@@ -23,7 +23,7 @@
         <Label x:Name="labelTempo" Content="Tempo estimado:" HorizontalAlignment="Left" Margin="40,337,0,0" VerticalAlignment="Top" Width="121"/>
         <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="362,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnSalvar_Click"/>
         <Button x:Name="BtnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="59,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnVoltar_Click"/>
-        <TextBox x:Name="txtBusca" HorizontalAlignment="Left" Height="23" Margin="403,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBusca" HorizontalAlignment="Left" Height="23" Margin="403,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="BtnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="538,37,0,0" VerticalAlignment="Top" Width="75" Click="BtnBuscar_Click"/>
         <Button x:Name="BtnSelecionar" Content="Selecionar" HorizontalAlignment="Left" Margin="538,221,0,0" VerticalAlignment="Top" Width="75" Click="BtnSelecionar_Click"/>
         <Button x:Name="BtnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="263,389,0,0" VerticalAlignment="Top" Width="75" Click="BtnAlterar_Click"/>

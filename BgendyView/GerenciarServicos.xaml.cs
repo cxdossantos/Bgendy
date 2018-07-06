@@ -23,7 +23,11 @@ namespace BgendyView
     {
         public GerenciarServicos()
         {
+            bool validador = false;
             InitializeComponent();
+            HabilitaCampos(validador);
+
+
         }
 
         private void ListViewServicos_Loaded(object sender, RoutedEventArgs e)
@@ -99,14 +103,16 @@ namespace BgendyView
 
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow home = new MainWindow();
             this.Close();
+            home.ShowDialog();
         }
 
         private void BtnSelecionar_Click(object sender, RoutedEventArgs e)
         {
             bool validador = true;
-            btnSalvar.IsEnabled = false;
             HabilitaCampos(validador);
+            btnSalvar.IsEnabled = false;
             Servico servico = (Servico)listViewServicos.SelectedItem;
 
             txtDescricao.Text = servico.Descricao;
@@ -150,12 +156,11 @@ namespace BgendyView
         private void BtnNovo_Click(object sender, RoutedEventArgs e)
         {
             bool validador = true;
-            
+
+            HabilitaCampos(validador);
             BtnAlterar.IsEnabled = false;
             BtnExcluir.IsEnabled = false;
-
             LimparCampos();
-            HabilitaCampos(validador);
         }
 
         private void PopulaListaServicos()
@@ -177,12 +182,20 @@ namespace BgendyView
                 txtDescricao.IsEnabled = true;
                 txtTempo.IsEnabled = true;
                 txtValor.IsEnabled = true;
+                btnSalvar.IsEnabled = true;
+                BtnExcluir.IsEnabled = true;
+                BtnAlterar.IsEnabled = true;
+                PopulaListaServicos();
             }
             else
             {
                 txtDescricao.IsEnabled = false;
                 txtTempo.IsEnabled = false;
                 txtValor.IsEnabled = false;
+                btnSalvar.IsEnabled = false;
+                BtnExcluir.IsEnabled = false;
+                BtnAlterar.IsEnabled = false;
+                PopulaListaServicos();
             }
         }
         private void LimparCampos()

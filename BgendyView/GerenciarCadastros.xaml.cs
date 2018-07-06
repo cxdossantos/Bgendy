@@ -23,7 +23,10 @@ namespace BgendyView
     {
         public GerenciarCadastros()
         {
+            bool validador = false;
             InitializeComponent();
+            HabilitaCampos(validador);
+
         }
 
         private void ListViewClientes_Loaded(object sender, RoutedEventArgs e)
@@ -77,9 +80,9 @@ namespace BgendyView
             Cliente cliente = new Cliente();
 
             cliente.Nome = txtNome.Text;
-            cliente.Cpf = Convert.ToInt32(txtCpf.Text);
+            cliente.Cpf = Convert.ToInt64(txtCpf.Text);
             cliente.DtNasc = Convert.ToDateTime(txtDtNasc.Text);
-            cliente.Fone = Convert.ToInt32(txtFone.Text);
+            cliente.Fone = Convert.ToInt64(txtFone.Text);
 
             clientesController.Adicionar(cliente);
             MessageBox.Show("Cliente " + cliente.Nome + "  Cód.:  " + cliente.Id + " registrado!");
@@ -115,14 +118,16 @@ namespace BgendyView
 
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow home = new MainWindow();
             this.Close();
+            home.ShowDialog();
         }
 
         private void BtnSelecionar_Click(object sender, RoutedEventArgs e)
         {
             bool validador = true;
-            btnSalvar.IsEnabled = false;
             HabilitaCampos(validador);
+            btnSalvar.IsEnabled = false;
             Cliente cliente = (Cliente)listViewClientes.SelectedItem;
 
             txtNome.Text = cliente.Nome;
@@ -134,17 +139,19 @@ namespace BgendyView
         private void BtnAlterar_Click(object sender, RoutedEventArgs e)
         {
             bool validador = false;
+            btnSalvar.IsEnabled = false;
+
             ClienteController clienteController = new ClienteController();
             Cliente cliente = (Cliente)listViewClientes.SelectedItem;
 
             cliente.DtNasc = Convert.ToDateTime(txtDtNasc.Text);
-            cliente.Fone = Convert.ToInt32(txtFone.Text);
+            cliente.Fone = Convert.ToInt64(txtFone.Text);
 
             clienteController.Editar(cliente);
-            PopulaListaClientes();
             MessageBox.Show("Alterado");
             LimparCampos();
             HabilitaCampos(validador);
+            PopulaListaClientes();
         }
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
@@ -165,11 +172,10 @@ namespace BgendyView
         {
             bool validador = true;
 
-            btnAlterar.IsEnabled = false;
-            btnExcluir.IsEnabled = false;
-
             LimparCampos();
             HabilitaCampos(validador);
+            btnAlterar.IsEnabled = false;
+            btnExcluir.IsEnabled = false;
         }
 
 
@@ -180,6 +186,10 @@ namespace BgendyView
                 txtCpf.IsEnabled = true;
                 txtDtNasc.IsEnabled = true;
                 txtFone.IsEnabled = true;
+                btnAlterar.IsEnabled = true;
+                btnExcluir.IsEnabled = true;
+                btnSalvar.IsEnabled = true;
+
             }
             else
             {
@@ -187,6 +197,9 @@ namespace BgendyView
                 txtCpf.IsEnabled = false;
                 txtDtNasc.IsEnabled = false;
                 txtFone.IsEnabled = false;
+                btnAlterar.IsEnabled = false;
+                btnExcluir.IsEnabled = false;
+                btnSalvar.IsEnabled = false;
             }              
         }
         private void LimparCampos()

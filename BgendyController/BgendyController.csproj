@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtendimentoController.cs" />
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="ClienteController.cs" />
     <Compile Include="DAL\Contexto.cs" />

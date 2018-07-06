@@ -23,7 +23,7 @@ namespace BgendyController
 
         public Servico BuscarPorID(int id)
         {
-            return contexto.Servicos.Find(id);
+            return contexto.Servicos.FirstOrDefault(c => c.Id == id);
         }
 
         public void Editar(Servico entity)
